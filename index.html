@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Visualizer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div id="brand">
+        <span class="brand-mark">▦</span>
+        <span class="brand-name">ML&nbsp;Visualizer</span>
+      </div>
+      <button id="btn-map" title="All lessons (Esc)"><span>☰</span> Lessons</button>
+      <div id="crumb">
+        <span id="crumb-ch"></span>
+        <span id="crumb-title"></span>
+      </div>
+      <div id="pathnav">
+        <button id="btn-prev" class="pbtn" title="Previous lesson">←</button>
+        <span id="pathpos"></span>
+        <button id="btn-next" class="pbtn" title="Next lesson">→</button>
+      </div>
+    </header>
+
+    <div id="body">
+      <aside id="sidebar">
+        <h2 id="module-title">—</h2>
+        <p id="module-desc"></p>
+        <div id="controls"></div>
+        <div id="legend"></div>
+      </aside>
+
+      <main id="stage-wrap">
+        <div id="stage-holder">
+          <canvas id="stage"></canvas>
+          <div id="caption"></div>
+          <button id="btn-nextlesson" hidden></button>
+        </div>
+
+        <div id="transport">
+          <button id="btn-reset"  class="tbtn" title="Reset (R)">⟲</button>
+          <button id="btn-back"   class="tbtn" title="Previous step (←)">⏮</button>
+          <button id="btn-play"   class="tbtn tbtn-main" title="Play / Pause (Space)">▶</button>
+          <button id="btn-step"   class="tbtn" title="Next step (→)">⏭</button>
+          <button id="btn-finish" class="tbtn" title="Skip to end">⏩</button>
+          <div class="speed-box">
+            <span class="speed-label">speed</span>
+            <input id="speed" type="range" min="-2" max="3" step="0.1" value="-1">
+            <span id="speed-val">0.5×</span>
+          </div>
+          <div id="progress-box"><div id="progress-bar"></div></div>
+          <span id="step-count"></span>
+        </div>
+
+        <section id="detail">
+          <div id="detail-inner"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- lesson map / landing screen -->
+    <div id="home">
+      <div id="home-scroll">
+        <div id="home-head">
+          <h1>How neural networks actually work</h1>
+          <p id="home-sub"></p>
+          <div id="home-actions">
+            <button id="home-start" class="home-btn primary">Start at lesson 1 →</button>
+            <button id="home-resume" class="home-btn" hidden></button>
+          </div>
+        </div>
+        <div id="home-chapters"></div>
+        <p id="home-foot">Press <kbd>Esc</kbd> any time to come back to this map.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="js/iso.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/convnet.js"></script>
+  <script src="js/neuron.js"></script>
+  <script src="js/mlp.js"></script>
+  <script src="js/gd.js"></script>
+  <script src="js/train.js"></script>
+  <script src="js/conv.js"></script>
+  <script src="js/pool.js"></script>
+  <script src="js/cnn.js"></script>
+  <script src="js/cnntrain.js"></script>
+  <script src="js/embed.js"></script>
+  <script src="js/attn.js"></script>
+  <script src="js/mha.js"></script>
+  <script src="js/tblock.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
